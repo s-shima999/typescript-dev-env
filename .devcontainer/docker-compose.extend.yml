@@ -1,0 +1,7 @@
+version: "3"
+services:
+  nodejs:
+    environment:
+      - HOME=/home/user
+#    volumes:
+#      - ~/.gitconfig:/home/user/.gitconfig

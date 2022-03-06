@@ -1,0 +1,56 @@
+{
+  "name": "Remote-dev Project",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.extend.yml"
+  ],
+  "service": "nodejs",
+  "workspaceFolder": "/home/user/dev",
+//  "remoteUser": "user",
+  "extensions": [
+    "visualstudioexptteam.vscodeintellicode",
+    "oderwat.indent-rainbow",
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "pkief.material-icon-theme",
+    "coenraads.bracket-pair-colorizer-2",
+    "pmneo.tsimporter",
+    "stringham.move-ts",
+    "mike-co.import-sorter",
+    "esbenp.prettier-vscode",
+    "amazonwebservices.aws-toolkit-vscode",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "mhutchie.git-graph",
+  ],
+  "settings": {
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.profiles.linux": {
+      "zsh (login)": {
+        "path": "zsh",
+        "args": ["-l"]
+      }
+    },
+    // "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    // "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "eslint.enable": true,
+    // "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+      // "javascript",
+      // "javascriptreact",
+      //   "typescript",
+      //   "typescriptreact"
+      {"language": "javascript", "autoFix": true },
+      {"language": "javascriptreact", "autoFix": true },
+      {"language": "typescript", "autoFix": true },
+      {"language": "typescriptreact", "autoFix": true }
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true // ファイル保存時にESLintでフォーマット
+    },
+  },
+  "shutdownAction": "stopCompose"
+}
